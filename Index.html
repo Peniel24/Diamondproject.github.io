@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to [Your Network Marketing Business]</title>
+    <style>
+        /* CSS for Styling the Landing Page */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #2575fc;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #6a11cb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .button.zoom {
+            background-color: #6a11cb;
+        }
+        .button.onsite {
+            background-color: #2575fc;
+        }
+        .button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+              <h1>Welcome to [Your Network Marketing Business]</h1>
+        <p>We’re excited to connect with you and help you get started!
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Meeting - [Your Network Marketing Business]</title>
+    <style>
+        /* CSS for styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #2575fc;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .button {
+            margin-top: 20px;
+            background-color: #6a11cb;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background-color: #2575fc;
+        }
+        .meeting-options, .confirmation {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book a Meeting</h1>
+        <form id="meetingForm">
+            <!-- Personal Information Fields -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" required>
+
+            <label for="whatsapp">WhatsApp Number:</label>
+            <input type="text" id="whatsapp">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <!-- Meeting Preference Button -->
+            <button type="button" class="button" onclick="showMeetingOptions()">Book a Meeting</button>
+        </form>
+
+        <!-- Meeting Options -->
+        <div class="meeting-options" id="meetingOptions">
+            <h3>Choose Meeting Preference</h3>
+            <button type="button" class="button" onclick="chooseOnline()">Online (Zoom)</button>
+            <button type="button" class="button" onclick="chooseOffline()">On-Site</button>
+        </div>
+
+        <!-- Online Meeting Options -->
+        <div class="meeting-options" id="onlineOptions">
+            <label for="meetingDay">Select a Day:</label>
+            <select id="meetingDay">
+                <option>Monday</option>
+                <option>Wednesday</option>
+                <option>Friday</option>
+            </select>
+
+            <label for="meetingTime">Select a Time:</label>
+            <select id="meetingTime">
+                <option>10:00 AM</option>
+                <option>2:00 PM</option>
+                <option>6:00 PM</option>
+            </select>
+
+            <button type="button" class="button" onclick="confirmBooking('Online')">Confirm Online Meeting</button>
+        </div>
+
+        <!-- Offline Meeting Options -->
+        <div class="meeting-options" id="offlineOptions">
+            <p>Location: [Your On-Site Location Address]</p>
+            <p>Time: 10:00 AM - 4:00 PM</p>
+            <button type="button" class="button" onclick="confirmBooking('Offline')">Confirm On-Site Meeting</button>
+        </div>
+
+        <!-- Confirmation Message -->
+        <div class="confirmation" id="confirmation">
+            <h3>Meeting Booked Successfully!</h3>
+            <p id="confirmationMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for handling form submission and meeting booking
+        let reservationCount = 1;
+
+        function showMeetingOptions() {
+            // Show meeting options after collecting personal info
+            document.getElementById('meetingOptions').style.display = 'block';
+        }
+
+        function chooseOnline() {
+            // Show online meeting options
+            document.getElementById('onlineOptions').style.display = 'block';
+            document.getElementById('offlineOptions').style.display = 'none';
+        }
+
+        function chooseOffline() {
+            // Show offline meeting options
+            document.getElementById('onlineOptions').style.display = 'none';
+            document.getElementById('offlineOptions').style.display = 'block';
+        }
+
+        function confirmBooking(meetingType) {
+            // Collect data from the form
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const location =
